@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anu Dhagat Resume</title>
+
+  <!--Add the font-->
+  <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+
+  <!-- Load the page styles. -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript"
+        src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}">
+  </script>
+  <script src="js/jQuery.js"></script>
+  <!--For charts-->
+  <script src="js/bower_components/chartjs/Chart.js"></script>
+
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+</head>
+
+<body unresolved>
+  <div id="main">
+    <div class="container-fluid">
+
+      <div class="row" style="display:flex">
+        <div id="header" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        </div>
+        <div id="skillsTitle" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        </div>
+      </div> <!-- end row 1-->
+
+      <div class="row">
+        <div id="education" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <h2>Education</h2>
+        </div>
+        <div id= "workExperience" class ="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+          <h2>Work Experience</h2>
+        </div>
+      </div> <!--end row 2 -->
+
+      <div class="row">
+        <div id="projects" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h2>Projects</h2>
+        </div>
+      </div> <!--end row 3 -->
+
+      <div class="row">
+        <div id="mapDiv" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h2>Where I've Lived and Worked</h2>
+        </div>
+        <div></div>
+        <div id="footer" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+      </div> <!--end row 4 -->
+
+    </div> <!--end container -->
+
+  <script src="js/resumeBuilder.js"></script>
+  <script type="text/javascript">
+
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.backgroundColor = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
