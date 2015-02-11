@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><nav class="navbar navbar-default">
   <title>Anu Dhagat Resume</title>
 
   <!--Add the font-->
   <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
-
-  <!-- Load the page styles. -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script type="text/javascript"
-        src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}">
+    src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}">
   </script>
   <script src="js/jQuery.js"></script>
-  <!--For charts-->
-  <script src="js/bower_components/chartjs/Chart.js"></script>
-
-  <!-- More on helper.js in the class -->
+  <script src="js/bootstrap.js"></script>
   <script src="js/helper.js"></script>
-
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
 </head>
+<body>
 
-<body unresolved>
-  <div id="main">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#header">Anu Dhagat</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#education">Education <span class="sr-only">(current)</span></a></li>
+        <li><a href="#workExperience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#mapDiv">Locations</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a id="phoneLnk" href="#">Phone</a></li>
+            <li><a id="emailLnk" href="#">Email</a></li>
+            <li><a id="blogLnk" href="#">Blog</a></li>
+            <li><a id="locationLnk" href="#">Location</a></li>
+            <li class="divider"></li>
+            <li><a id="githubLnk" href="#">Github</a></li>
+            <li id="twitterLnk" class="divider"></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<main>
+    <div id="main">
     <div class="container-fluid">
 
       <div class="row" style="display:flex">
@@ -88,5 +121,7 @@
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
+</main>
+
 </body>
 </html>
