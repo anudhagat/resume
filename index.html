@@ -18,9 +18,10 @@
 </head>
 <body>
 
+<!--Navigation bar at the top of the page. In mobile viewports, this collapses to a small icon to the right.-->
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Home and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -28,16 +29,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#header">Anu Dhagat</a>
+      <a class="navbar-brand" href="#headerLnk">Anu Dhagat</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#education">Education <span class="sr-only">(current)</span></a></li>
-        <li><a href="#workExperience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#mapDiv">Locations</a></li>
+        <li class="active"><a href="#educationLnk">Education <span class="sr-only">(current)</span></a></li>
+        <li><a href="#workExperienceLnk">Experience</a></li>
+        <li><a href="#projectsLnk">Projects</a></li>
+        <li><a href="#mapDivLnk">Locations</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -61,29 +62,38 @@
     <div id="main">
     <div class="container-fluid">
 
+      <!--Row 1, Header: Name, pic, welcome msg, contact links, and skills.-->
       <div class="row" style="display:flex">
+        <div id="headerLnk"></div>
         <div id="header" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
         </div>
         <div id="skillsTitle" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         </div>
       </div> <!-- end row 1-->
 
+      <!--Row 2: Education and Work Experience.-->
       <div class="row">
+        <div id="educationLnk"></div>
         <div id="education" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <h2>Education</h2>
         </div>
+        <div id="workExperienceLnk"></div>
         <div id= "workExperience" class ="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
           <h2>Work Experience</h2>
         </div>
       </div> <!--end row 2 -->
 
+      <!--Row 3: Projects -->
       <div class="row">
+        <div id="projectsLnk"></div>
         <div id="projects" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h2>Projects</h2>
         </div>
       </div> <!--end row 3 -->
 
+      <!--Row 4: Google Map with pinPoster of my locations.-->
       <div class="row">
+        <div id="mapDivLnk"></div>
         <div id="mapDiv" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h2>Where I've Lived and Worked</h2>
         </div>
@@ -93,7 +103,9 @@
 
     </div> <!--end container -->
 
+  <!--JS file that supplies the content to all the rows above.-->
   <script src="js/resumeBuilder.js"></script>
+  <!-- JS script that takes care of not displaying a row if there is no content.-->
   <script type="text/javascript">
 
     if(document.getElementsByClassName('flex-item').length === 0) {

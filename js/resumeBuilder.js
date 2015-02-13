@@ -13,6 +13,7 @@ var bio = {
 	"welcomeMessage": "Welcome to my Resume Page!",
 	"skills": ["C++","Java","JavaScript","HTML/CSS","Python"],
 	display: function (){
+		/* Adding href attribute to all the links in Contacts collapsible menu. */
 		$('#phoneLnk').attr('href','tel: ' + bio.contacts.phone);
 		$('#emailLnk').attr('href','mailto: ' +bio.contacts.email);
 		$('#githubLnk').attr('href',bio.contacts.github);
@@ -20,6 +21,7 @@ var bio = {
 		$('#twitterLnk').attr('href',bio.contacts.twitter);
 		$('#locationLnk').attr('href',"#mapDiv");
 
+		/*Adding Name, role, pic to the header.*/
 		var formattedName = HTMLheaderName.replace("%data%",bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var pic = HTMLbioPic.replace("%data%",bio.picture);
@@ -27,6 +29,8 @@ var bio = {
 		$("#header").append(pic);
 		$("#header").append(formattedName);
 		$("#header").append(formattedRole);
+
+		/*Filling the Contacts section of the header. */
 		$("#header").append(HTMLtopContactsStart);
 		$("#footer").append(HTMLfooterContactsStart);
 
@@ -54,8 +58,10 @@ var bio = {
 		$("#topContacts").append(formattedContact);
 		$("#footerContacts").append(formattedContact);
 
+		/*Adding the welcome msg.*/
 		$("#header").append(formattedWelcome);
 
+		/*Adding the skills to the header.*/
 		if (bio.skills.length >0){
 			$("#skillsTitle").append(HTMLskillsStart);
 			for(var i=0;i< bio.skills.length;i++){
@@ -91,6 +97,7 @@ var work ={
 		}
 	],
 	display : function(){
+		/*Adding content to display all the information for each job. */
 		for(var i=0; i< work.jobs.length;i++){
 			$("#workExperience").append(HTMLworkStart);
 			var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[i].employer);
@@ -140,6 +147,7 @@ var education = {
 
 	],
 	display: function (){
+		/*Adding content to display each school in the education section.*/
 		for(var i=0; i<education.schools.length; i++){
 			$('#education').append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
@@ -154,6 +162,7 @@ var education = {
 			$(".education-entry:last").append(formattedNameLocation);
 		}
 
+		/*Adding content to the online courses under the education section. */
 		if(education.onlineCourses.length >0){
 			$('.education-entry:last').append(HTMLonlineClasses);
 			for(var i =0; i < education.onlineCourses.length; i++){
@@ -189,6 +198,7 @@ var projects ={
 
 		],
 		display: function() {
+			/*Adding content to the project section. Displays all projects and their images.*/
 			$("#projects").append(HTMLallProjects);
 			for(var i =0; i < projects.project.length; i++){
 				$(".projectEntries").append(HTMLprojectStart);
@@ -209,12 +219,15 @@ var projects ={
 		}
 };
 
+/*Calling all display functions to render all the information in the different sections of the resume.*/
 bio.display();
 work.display();
 education.display();
 projects.display();
 
 //This creates an internationalize button and changes the name at the top to be in the form: Jane DOE.
+//I am choosing not to display this code, although it works fine.
+
 //function inName(name){
 //	var nameArray = name.trim().split(" ");
 //	var first = nameArray[0];
@@ -222,8 +235,11 @@ projects.display();
 //	return first.charAt(0).toUpperCase()+first.slice(1).toLowerCase()+" "+last.toUpperCase();
 //}
 //$("#main").append(internationalizeButton);
+
+/*Displays the google map. */
 $("#mapDiv").append(googleMap);
 
+/*This code adds the content to the google gauge chart under the project section. */
   google.load('visualization', '1', {packages: ['gauge']});
   google.setOnLoadCallback(drawGauge);
 
